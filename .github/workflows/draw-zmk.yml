@@ -1,5 +1,5 @@
 # Reusable workflow for drawing and committing an automated keymap diagram
-# for ZMK config repos using https://github.com/caksoylar/keymap-drawer
+# for ZMK config repos using https://github.com/HelloThisIsFlo/keymap-drawer <- Use my fork, for hotfixes
 name: Draw ZMK keymaps
 on:
   workflow_call:
@@ -67,7 +67,7 @@ jobs:
 
       - name: Install keymap-drawer (git)
         if: inputs.install_branch != ''
-        run: python3 -m pip install "git+https://github.com/caksoylar/keymap-drawer.git@${{ inputs.install_branch }}"
+        run: python3 -m pip install "git+https://github.com/HelloThisIsFlo/keymap-drawer.git@${{ inputs.install_branch }}"
 
       - name: Draw keymaps
         run: |
